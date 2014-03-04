@@ -1,5 +1,6 @@
 var pattern=new Array(0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
 var i=5,count=0,clickPermission=false;
+var clickTimer=0;
 function levelMore()
 {
 i++;
@@ -14,7 +15,8 @@ function getImg(imgId)
 			if(imgId==pattern[y])
 			{
 				count=0;
-				alert("game over");
+				//alert("game over");
+				Avgrund.show( "#wrong-popup" );
 				clickPermission=false;
 			}
 		}
@@ -22,7 +24,8 @@ function getImg(imgId)
 			if(count>=i)
 			{
 				count=0;
-				alert("correct");
+				//alert("correct");
+				Avgrund.show( "#correct-popup" );
 				clickPermission=false;
 			}
 	}
@@ -64,8 +67,7 @@ function makePattern()
 		}
 		clickPermission=true;
 	},1000);
-}
-function printArray()
-{
-	document.write(pattern);
+	setTimeout(function(){
+		
+	},1000);
 }
