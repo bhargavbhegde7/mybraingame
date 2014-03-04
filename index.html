@@ -22,26 +22,7 @@
 		</script>
 	</head>
 	<body onload="openDialog();">
-	<aside id="default-popup" class="avgrund-popup">
-			<h class="gameHeading"><strong>Welcome to MEMORY Game!!</strong></h>
-				<p class="instruction">click on "<strong>get me a new challenge</strong>" button. Remember the blocks and click the same again. Click "<strong>increase level</strong>" to increase the level<small>press "<strong>Esc</strong>" button on your key board or click outside this box or click "<strong>OK</strong>" to exit this message</p>
-
-			<button class="closebutton" onclick="javascript:closeDialog();">PLAY</button>
-		</aside>
-		<!--////////////////////////////////////////////////////////////////-->
-		<!--////////////////////////////////////////////////////////////////-->
-		<!--////////////////////////////////////////////////////////////////-->
-		<aside id="correct-popup" class="avgrund-popup">
-			<h1>CORRECT!!</h1>
-			<button class="closebutton" onclick="javascript:closeDialog();">OK</button>
-		</aside>
-		<!--////////////////////////////////////////////////////////////////-->
-		<!--////////////////////////////////////////////////////////////////-->
-		<!--////////////////////////////////////////////////////////////////-->
-		<aside id="wrong-popup" class="avgrund-popup-wrong">
-			<h1>GAME OVER!!</h1>
-			<button class="closebutton" onclick="javascript:closeDialog();">OK</button>
-		</aside>
+	
 		<!--////////////////////////////////////////////////////////////////-->
 		<!--////////////////////////////////////////////////////////////////-->
 		<!--////////////////////////////////////////////////////////////////-->
@@ -49,6 +30,19 @@
 		<article class="avgrund-contents">
 		<!--<button onclick="javascript:openDialog();">Open Avgrund</button>-->
 	<div style="position:absolute;left:5%;top:5%;">
+		<table>
+			<tr>
+				<td>
+					<label>timer : </label><p id="clickTimerTag">--</p>
+				</td>
+				<td>
+					<label>remaining : </label><p id="countTag">--</p>
+				</td>
+			</tr>
+		</table>
+		
+		
+		
 		<table>
 				<td onclick="getImg(1);">
 				<div id='1' style="
@@ -180,11 +174,39 @@
 		<button onclick="makePattern();">new challenge</button>
 		<button onclick="levelMore();">level up</button>
 		<button onclick="resetGrid();">reset</button>
-		<!--<button onclick="printArray();">view array</button>-->
+		<!-- <button onclick="printArray();">view array</button> -->
 		</div>
 		</article>
+		<!--////////////////////////////////////////////////////////////////-->
+		<!--////    welcome screen poput   /////////////////////////////////-->
+		<!--////////////////////////////////////////////////////////////////-->
+		<aside id="default-popup" class="avgrund-popup">
+			<h class="gameHeading"><strong>Welcome to MEMORY Game!!</strong></h>
+				<p class="instruction">click on "<strong>get me a new challenge</strong>" button. Remember the blocks and click the same again. Click "<strong>increase level</strong>" to increase the level<small>press "<strong>Esc</strong>" button on your key board or click outside this box or click "<strong>OK</strong>" to exit this message</p>
+
+			<button class="closebutton" onclick="javascript:closeDialog();">PLAY</button>
+		</aside>
+		<!--////////////////////////////////////////////////////////////////-->
+		<!--////    correct poput   ////////////////////////////////////////-->
+		<!--////////////////////////////////////////////////////////////////-->
+		<aside id="correct-popup" class="avgrund-popup">
+			<h1>CORRECT!!</h1>
+			<button class="closebutton" onclick="javascript:closeDialog();">OK</button>
+		</aside>
+		<!--////////////////////////////////////////////////////////////////-->
+		<!--//////////////////   wrong popup  //////////////////////////////-->
+		<!--////////////////////////////////////////////////////////////////-->
+		<aside id="wrong-popup" class="avgrund-popup-wrong">
+			<h1>GAME OVER!!</h1>
+			<label style="display:none;" id="wrong-message">--</label>
+			<button class="closebutton" onclick="javascript:closeDialog();">OK</button>
+		</aside>
+		<!--////////////////////////////////////////////////////////////////-->
+		<!--////////////////////////////////////////////////////////////////-->
+		<!--////////////////////////////////////////////////////////////////-->
 		<div class="avgrund-cover"></div>
 
 		<script type="text/javascript" src="pages/js/avgrund.js"></script>
+
 	</body>
 </html>
