@@ -1,30 +1,13 @@
 {
-  "version": "0.1",
-  "name": "myBrainGame",
-  "description": "A brand new brain memory game",
-  "launch_path": "C:\Users\bhargav_1\Documents\GitHub\mybraingame(2-3-14)\index.html",
+  "name": "mybraingame",
+  "description": "Awesome description",
+  "launch_path": "/index.html",
   "icons": {
-    "16": "/app-template/app-icons/icon-16.png",
-    "48": "/app-template/app-icons/icon-48.png",
-    "128": "/app-template/app-icons/icon-128.png"
+    "128": "/pages/images/finder.png"
   },
   "developer": {
-    "name": "Your Name",
-    "url": "http://yourawesomeapp.com"
-  },
-  "locales": {
-    "es": {
-      "description": "Su nueva aplicación impresionante Open Web",
-      "developer": {
-        "url": "http://yourawesomeapp.com"
-      }
-    },
-    "it": {
-      "description": "La tua nuova fantastica Open Web App",
-      "developer": {
-        "url": "http://yourawesomeapp.com"
-      }
-    }
+    "name": "bhargav",
+    "url": "http://your-homepage-here.org"
   },
   "default_locale": "en"
 }
