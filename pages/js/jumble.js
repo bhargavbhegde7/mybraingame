@@ -9,11 +9,27 @@ function getImg(imgId)
 {
 	if(clickPermission)
 	{		
+		
+		/*
+		if((pattern[imgId-1]==-1)||(pattern[imgId-1]==2))		
+			{
+				document.getElementById(imgId).style.background="black";
+			}
+		else if((pattern[imgId-1]==1)||(pattern[imgId-1]==0))
+			{
+				document.getElementById(imgId).style.background="red";
+			}
+		*/
+		/*
+		clicked correct  -1
+		clicked wrong     2
+		unclicked correct 1
+		unclicked wrong   0
+		*/
 		switch(pattern[imgId-1])
 		{
 			case 1:
-				document.getElementById(imgId).style.background="red";
-				//document.getElementById(imgId).innerHTML=imgId;
+				document.getElementById(imgId).style.background="red";				
 				count++;
 				document.getElementById("countTag").innerHTML=i-count;
 				clickTimer=0;

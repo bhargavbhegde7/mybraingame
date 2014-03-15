@@ -69,9 +69,9 @@
 .avgrund-popup-wrong {
 	position: absolute;
 	width: 74%;
-	height: 28%;
+	height: 35%;
 	left: 50%;
-	top: 50%;
+	top: 65%;
 	margin: -63% 0 0 -38%;
 	visibility: hidden;
 	opacity: 0;
@@ -91,9 +91,9 @@
 .avgrund-popup-correct {
 	position: absolute;
 	width: 74%;
-	height: 68%;
+	height: 28%;
 	left: 50%;
-	top: 50%;
+	top: 65%;
 	margin: -63% 0 0 -38%;
 	visibility: hidden;
 	opacity: 0;
