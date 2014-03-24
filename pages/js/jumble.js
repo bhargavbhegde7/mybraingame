@@ -5,21 +5,11 @@ function levelMore()
 {
 i++;
 }
+/*--------------------------------------------------------------------------------*/
 function getImg(imgId)
 {
 	if(clickPermission)
-	{		
-		
-		/*
-		if((pattern[imgId-1]==-1)||(pattern[imgId-1]==2))		
-			{
-				document.getElementById(imgId).style.background="black";
-			}
-		else if((pattern[imgId-1]==1)||(pattern[imgId-1]==0))
-			{
-				document.getElementById(imgId).style.background="red";
-			}
-		*/
+	{
 		/*
 		clicked correct  -1
 		clicked wrong     2
@@ -29,7 +19,7 @@ function getImg(imgId)
 		switch(pattern[imgId-1])
 		{
 			case 1:
-				document.getElementById(imgId).style.background="red";				
+				document.getElementById(imgId).style.background="red";
 				count++;
 				document.getElementById("countTag").innerHTML=i-count;
 				clickTimer=0;
@@ -81,17 +71,33 @@ function getImg(imgId)
 		}		
 	}
 }
+/*--------------------------------------------------------------------------------*/
 function resetGrid()
 {	
 	for(var n=0;n<25;n++)
 	{
 		document.getElementById(n+1).style.background="black";
+		
 	}	
+	for(var n=0;n<25;n++)/*initialize all the array elements to zero*/
+	{
+		document.getElementById(n+1).style.background="black";
+		pattern[n]=0;
+	}
+	
+	endClickTimer=false;
+	clickTimer=0;
+	clickPermission=true;
+	document.getElementById("clickTimerTag").innerHTML="--";
+	document.getElementById("countTag").innerHTML="--";
+	Avgrund.show( "#reset-popup" );
+	
 }
+/*--------------------------------------------------------------------------------*/
 function makePattern()
 {
 	document.getElementById("countTag").innerHTML=i-count;
-	for(var n=0;n<25;n++)
+	for(var n=0;n<25;n++)/*initialize all the array elements to zero*/
 	{
 		document.getElementById(n+1).style.background="black";
 		pattern[n]=0;
@@ -102,8 +108,7 @@ function makePattern()
 	{
 		var rndmNum = Math.floor ((Math.random () * 100) % 25);		
 		if(!pattern[rndmNum])
-		{			
-			//pattern[rndmNum]=j++;
+		{
 			pattern[rndmNum]++;
 			j++;
 		}		
@@ -125,6 +130,7 @@ function makePattern()
 		clickPermission=true;
 	},1000);
 }
+/*--------------------------------------------------------------------------------*/
 function startClickTimer()
 {
 	if(endClickTimer)
@@ -149,6 +155,7 @@ function startClickTimer()
 		startClickTimer();
 	},1000);
 }
+/*--------------------------------------------------------------------------------*/
 function printArray()
 {
 	document.write(pattern);

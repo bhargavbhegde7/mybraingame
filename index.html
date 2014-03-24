@@ -1,7 +1,10 @@
-<html>
+<?xml version="1.0" encoding="utf-16"?>
+<!DOCTYPE html>
 	<head>
+		<meta charset="utf-8">
 		<title>brain game</title>
 		<script type="text/javascript" src="pages/js/jumble.js"></script>
+		<script type="text/javascript" src="pages/js/jquery-1.11.0.min.js"></script>
 		<script type="text/javascript" src="pages/bootstrap-3.0.3-dist/dist/js/bootstrap.js"></script>
 		<script type="text/javascript" src="pages/bootstrap-3.0.3-dist/dist/js/bootstrap.min.js"></script>
 		<!-- for bootstrap -->
@@ -23,8 +26,7 @@
 	</head>
 	<body onload="openDialog();">
 	
-		<!--////////////////////////////////////////////////////////////////-->
-		<!--////////////////////////////////////////////////////////////////-->
+
 		<!--////////////////////////////////////////////////////////////////-->
 
 		<article class="avgrund-contents">
@@ -177,32 +179,40 @@
 		<!-- <button onclick="printArray();">view array</button> -->
 		</div>
 		</article>
-		<!--////////////////////////////////////////////////////////////////-->
+
 		<!--////    welcome screen poput   /////////////////////////////////-->
-		<!--////////////////////////////////////////////////////////////////-->
+
 		<aside id="default-popup" class="avgrund-popup">
-			<h class="gameHeading"><strong>Welcome to MEMORY Game!!</strong></h>
+			<h class="gameHeading"><strong>Welcome to MEMORY Game!!!</strong></h>
 				<p class="instruction">click on "<strong>get me a new challenge</strong>" button. Remember the blocks and click the same again. Click "<strong>increase level</strong>" to increase the level<small>press "<strong>Esc</strong>" button on your key board or click outside this box or click "<strong>OK</strong>" to exit this message</p>
 
 			<button class="closebutton" onclick="javascript:closeDialog();">PLAY</button>
 		</aside>
-		<!--////////////////////////////////////////////////////////////////-->
+
 		<!--////    correct poput   ////////////////////////////////////////-->
-		<!--////////////////////////////////////////////////////////////////-->
+
 		<aside id="correct-popup" class="avgrund-popup-correct">
 			<h1>CORRECT!!</h1>
 			<button class="closebutton" onclick="javascript:closeDialog();">OK</button>
 		</aside>
-		<!--////////////////////////////////////////////////////////////////-->
+
 		<!--//////////////////   wrong popup  //////////////////////////////-->
-		<!--////////////////////////////////////////////////////////////////-->
+
 		<aside id="wrong-popup" class="avgrund-popup-wrong">
 			<h1>GAME OVER!!</h1>
 			<label style="display:none;" id="wrong-message">--</label>
 			<button class="closebutton" onclick="javascript:closeDialog();">OK</button>
 		</aside>
-		<!--////////////////////////////////////////////////////////////////-->
-		<!--////////////////////////////////////////////////////////////////-->
+
+		<!--//////////////////   reset popup  //////////////////////////////-->
+
+		<aside id="reset-popup" class="avgrund-popup-reset">
+			<h1>GAME OVER!!</h1>
+			<p>press <strong> get a new challenge </strong> to go to the starting of this level</p>
+			<label style="display:none;" id="wrong-message">--</label>
+			<button class="closebutton" onclick="javascript:closeDialog();">OK</button>
+		</aside>
+
 		<!--////////////////////////////////////////////////////////////////-->
 		<div class="avgrund-cover"></div>
 

@@ -1,6 +1,6 @@
 {
   "name": "mybraingame",
-  "description": "Awesome description",
+  "description": " A memory game where one has to remember the tiles that were highlighted and click them again ",
   "launch_path": "/index.html",
   "icons": {
     "128": "/pages/images/finder.png"
