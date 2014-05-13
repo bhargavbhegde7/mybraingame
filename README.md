@@ -1,7 +1,8 @@
 mybraingame
-===========
 
 memory game to be played on the browser
+
+desktop version http://www.mybraingame.appspot.com
 
 A simple javascript game that can be played either in browser, or in mobile. The link for android app is here:
 https://drive.google.com/file/d/0B3T7k5Xvp253VFp1UDRxMkdlczg/edit?usp=sharing

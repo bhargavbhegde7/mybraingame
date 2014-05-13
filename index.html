@@ -173,9 +173,10 @@
 			</td>
 			<tr></tr>		</table>
 			<br/>
-		<button onclick="makePattern();">new challenge</button>
-		<button onclick="levelMore();">level up</button>
+		<button onclick="makePattern();">next challenge</button>
+		<!-- <button onclick="levelMore();">level up</button> -->
 		<button onclick="resetGrid();">reset</button>
+		<button onclick="showLevel();">show level</button>
 		<!-- <button onclick="printArray();">view array</button> -->
 		</div>
 		</article>
@@ -207,7 +208,7 @@
 		<!--//////////////////   reset popup  //////////////////////////////-->
 
 		<aside id="reset-popup" class="avgrund-popup-reset">
-			<h1>GAME OVER!!</h1>
+			<h1>GAME IS RESET!!</h1>
 			<p>press <strong> get a new challenge </strong> to go to the starting of this level</p>
 			<label style="display:none;" id="wrong-message">--</label>
 			<button class="closebutton" onclick="javascript:closeDialog();">OK</button>
